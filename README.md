@@ -4,85 +4,86 @@ This project is based on building query table by giving sql query. In the first 
 
 
 
-##QUERY FORMAT 1##
-SELECT *
-FROM <first_table_name>
-JOIN <second_table_name>
-ON <first_table_name>.<a name of the column from the first table> = <second_table_name>.<a
-name of the column of the second table>
+##QUERY FORMAT 1##<br />
+SELECT *<br />
+FROM first_table_name<br />
+JOIN second_table_name<br />
+ON first_table_name.a name of the column from the first table = second_table_name.a<br />
+name of the column of the second table<br />
 ##QUERY EXAMPLE##
-SELECT *
-FROM table_a
-JOIN table_b
-ON table_a.column_a = table_b.column_b
+SELECT *<br />
+FROM table_a<br />
+JOIN table_b<br />
+ON table_a.column_a = table_b.column_b<br />
 
 
-##QUERY FORMAT 2##
-SELECT *
-FROM <first_table_name> <first_table_short_name>
-JOIN <second_table_name> <second_table_short_name>
-ON <first_table_short_name>.<column_name> = <second_table_short_name>.<column_name>
+##QUERY FORMAT 2##<br />
+SELECT *<br />
+FROM first_table_name first_table_short_name<br />
+JOIN second_table_name second_table_short_name<br />
+ON first_table_short_name.column_name = second_table_short_name.column_name<br />
 ##QUERY EXAMPLE##
-SELECT *
-FROM table_a ta
-JOIN table_b tb
-ON ta.column_a = tb.column_b
+SELECT *<br />
+FROM table_a ta<br />
+JOIN table_b tb<br />
+ON ta.column_a = tb.column_b<br />
 
 
-##QUERY FORMAT 3##
-SELECT <table_short_name>.<column_name>, <table_short_name>.<column_name>, ...
-FROM <first_table_name> <first_table_short_name>
-JOIN <second_table_name> <second_table_short_name>
-ON <first_table_short_name>.<column_name> = <second_table_short_name>.<column_name>
+##QUERY FORMAT 3##<br />
+SELECT table_short_name.column_name, table_short_name.column_name, ...<br />
+FROM first_table_name first_table_short_name<br />
+JOIN second_table_name second_table_short_name<br />
+ON first_table_short_name.column_name = second_table_short_name.column_name<br />
+
 ##QUERY EXAMPLE##
-SELECT ta.column_a1, ta.column_a2, ta.column_a3, tb.column_b1, tb.column_b2
-FROM table_a ta
-JOIN table_b tb
-ON ta.column_a0 = tb.column_b0
+SELECT ta.column_a1, ta.column_a2, ta.column_a3, tb.column_b1, tb.column_b2<br />
+FROM table_a ta<br />
+JOIN table_b tb<br />
+ON ta.column_a0 = tb.column_b0<br />
 
 
-Sample Input:
+Sample Input:<br />
 
-1
-2
-table_a
-3 3
-id_a a1 a2
-1 2 3
-2 4 5
-3 6 7
-table_b
-3 3
-id_b b1 b2
-1 2 9
-2 10 5
-3 12 7
-3
-SELECT *
-FROM table_a
-JOIN table_b
-ON table_a.a1 = table_b.b1
-SELECT *
-FROM table_a ta
-JOIN table_b tb
-ON ta.a2 = tb.b2
-SELECT ta.a1, ta.a2, tb.b1
-FROM table_a ta
-JOIN table_b tb
-ON ta.a2 = tb.b2
+1<br />
+2<br />
+table_a<br />
+3 3<br />
+id_a a1 a2<br />
+1 2 3<br />
+2 4 5<br />
+3 6 7<br />
+table_b<br />
+3 3<br />
+id_b b1 b2<br />
+1 2 9<br />
+2 10 5<br />
+3 12 7<br />
+3<br />
+SELECT *<br />
+FROM table_a<br />
+JOIN table_b<br />
+ON table_a.a1 = table_b.b1<br />
+SELECT *<br />
+FROM table_a ta<br />
+JOIN table_b tb<br />
+ON ta.a2 = tb.b2<br />
+SELECT ta.a1, ta.a2, tb.b1<br />
+FROM table_a ta<br />
+JOIN table_b tb<br />
+ON ta.a2 = tb.b2<br />
 
 
 
-Sample Output:
+Sample Output:<br />
 
-Test: 1
-id_a a1 a2 id_b b1 b2
-1 2 3 1 2 9
-id_a a1 a2 id_b b1 b2
-2 4 5 2 10 5
-3 6 7 3 12 7
-a1 a2 b1
-4 5 10
+Test: 1<br />
+id_a a1 a2 id_b b1 b2<br />
+1 2 3 1 2 9<br />
+id_a a1 a2 id_b b1 b2<br />
+2 4 5 2 10 5<br />
+3 6 7 3 12 7<br />
+a1 a2 b1<br />
+4 5 10<br />
 6 7 12
 
 
