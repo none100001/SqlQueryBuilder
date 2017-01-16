@@ -42,7 +42,7 @@ JOIN table_b tb<br />
 ON ta.column_a0 = tb.column_b0<br />
 
 
-Sample Input:<br />
+##Sample Input##
 
 1<br />
 2<br />
@@ -74,7 +74,7 @@ ON ta.a2 = tb.b2<br />
 
 
 
-Sample Output:<br />
+##Sample Output##
 
 Test: 1<br />
 id_a a1 a2 id_b b1 b2<br />
